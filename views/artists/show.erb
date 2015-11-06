@@ -1,0 +1,15 @@
+<h1><%= @artist.name %></h1>
+<img src="<%= @artist.photo_url %>" alt="phot of <%= @artist.name %>" height="25%" width="25%" />
+<p>
+  Nationality : <%= @artist.nationality %>
+</p>
+<p>
+  <a href="/artists/<%= @artist.id %>/edit">Edit Artist</a>
+</p>
+
+<h3>Songs</h3>
+<ul>
+  <% @artist.songs.each do |song| %>
+    <li><%= song.title %></li>
+  <% end %>
+</ul>
